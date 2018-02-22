@@ -1,0 +1,42 @@
+Documentacion De Juego Polla:
+
+Se trabajara con una base de datos postgresql y las tablas llamadas:
+-Partido
+	Que tendrá los atributos: 
+		- id: atributo automático de tipo integer, el cual será primary key
+		- equipo_a: Que será de tipo texto 
+		- equipo_b: Que será de tipo texto 
+
+-Polla 
+	Que tendrá los atributos: 
+		- id_partido de tipo entero y serial, y que será foreign key de la tabla Partido
+		- ganador: que será de tipo texto; 
+		
+-PollaApuesta 
+	Que tendrá los atributos: 
+		- id_polla: de tipo entero y serial, y que será foreign key de la tabla polla 
+		- id_user: de tipo entero y serial, y que será foreign key de la tabla user
+		- apuesta: que será de tipo texto
+
+Descripcion de manejo de datos:
+-Dentro de la tabla Partido serán almacenados todos los partidos del mundial. Esta tabla es la mas importante, 
+	porque de aqui se gestionaran los datos necesarios para que el usuario pueda predecir sus resultados.
+
+-La tabla Polla servirá para almacenar el partido seleccionado y el usuario jugador
+
+-La tabla PollaApuesta almacenará en su interior 2 foreigns keys para las tablas Polla y User, las cuales forman el primary key de esta tabla y el atributo apuesta
+	que contiene a la selección que ganará según las predicción del usuario
+
+Proceso: 
+Luego de que un usuario se haya logueado en la aplicacion. En la pantalla principal aparecerán los nombres de los juegos y su modalidad. 
+Para este caso del juego de la polla, se cargará la pantalla con un partido entre 2 selecciones (equipo_a y equipo_b) al azar 
+(estas serán elegidas de la tabla Partidos); una vez que el usuario elige el equipo que va a ganar,  se guarda en la tabla Polla los datos hasta la fecha del partido.  
+Finalmente, una vez se tenga los resultados del partido el usuario puede comparar sus predicciones y ver su puntaje
+En caso de que el usuario desee jugar en grupo, el usuario elegira la opcion jugar en grupo; sin embargo, tienen que existir las condiciones siguientes: 
+que un usuario previamente haya creado un grupo (el cual es almacenadao en la tabla grupo, junto con su nombre y la cantidad de participantes), 
+que haya invitado al usuario de este ejemplo a jugar y que este haya aceptado la invitación; o; que el usuario del ejemplo, haya creado un grupo 
+(el cual es almacenadao en la tabla grupo, junto con su nombre y la cantidad de participantes) y haya invitado a otros usuarios a jugar. 
+Habiendo satisfecho cualquiera de las dos condiciones expuestas, se carga la pantalla con el partido al azar entre las 2 seleciones
+(De la tabla Partidos); una vez que el usuario apuesta por su equipo ganador, se espera hasta la fecha del partido.
+Según el resultado y las personas que acertaron con los resultados, el premio se divide
+
