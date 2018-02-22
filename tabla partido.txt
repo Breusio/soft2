@@ -1,0 +1,89 @@
+Create table Partidos(
+nro_partido serial not null,
+equipo_a varchar2(40) not null,
+equipo_b varchar2(40) not null,
+gol_a integer(0),
+gol_b integer(0),
+equipo_gan varchar2 text not null,
+);
+
+insert into table Partidos(Rusia , Arabia Saudita)
+insert into table Partidos(Egipto , Uruguay)
+insert into table Partidos(Marruecos , Irán)
+insert into table Partidos(Portugal , España)
+insert into table Partidos(Francia , Australia)
+insert into table Partidos(Argentina , Islandia)
+insert into table Partidos(Perú , Dinamarca)
+insert into table Partidos(Croacia , Nigeria)
+insert into table Partidos(Costa Rica , Serbia)
+insert into table Partidos(Alemania , México)
+insert into table Partidos(Brasil , Suiza)
+insert into table Partidos(Suecia , República de Corea)
+insert into table Partidos(Bélgica , Panamá)
+insert into table Partidos(Túnez , Inglaterra)
+insert into table Partidos(Colombia , Japón)
+insert into table Partidos(Polonia , Senegal)
+insert into table Partidos(Rusia , Egipto)
+insert into table Partidos(Portugal , Marruecos)
+insert into table Partidos(Uruguay , Arabia Saudita)
+insert into table Partidos(Irán , España)
+insert into table Partidos(Dinamarca , Australia)
+insert into table Partidos(Francia , Perú)
+insert into table Partidos(Argentina , Croacia)
+insert into table Partidos(Brasil , Costa Rica)
+insert into table Partidos(Nigeria , Islandia)
+insert into table Partidos(Serbia , Suiza)
+insert into table Partidos(Bélgica , Túnez)
+insert into table Partidos(República de Corea , México)
+insert into table Partidos(Alemania , Suecia)
+insert into table Partidos(Inglaterra - Panamá)
+insert into table Partidos(Japón , Senegal)
+insert into table Partidos(Polonia , Colombia)
+insert into table Partidos(Uruguay , Rusia)
+insert into table Partidos(Arabia Saudita , Egipto)
+insert into table Partidos(Irán , Portugal)
+insert into table Partidos(España , Marruecos)
+insert into table Partidos(Dinamarca , Francia)
+insert into table Partidos(Australia , Perú)
+insert into table Partidos(Nigeria , Argentina)
+insert into table Partidos(Islandia , Croacia)
+insert into table Partidos(México , Suecia)
+insert into table Partidos(República de Corea , Alemania)
+insert into table Partidos(Serbia , Brasil)
+insert into table Partidos(Suiza , Costa Rica)
+insert into table Partidos(Japón , Polonia)
+insert into table Partidos(Senegal , Colombia)
+insert into table Partidos(Panamá , Túnez)
+insert into table Partidos(Inglaterra , Bélgica)
+
+
+====================================================================
+django
+
+from django.db import models
+
+class Partidos(models.Model):
+
+equipo_a = models.CharField(max_length=30)
+equipo_b = models.CharField(max_length=30)
+gol_a = model.IntegerField(0)
+gol_b = model.IntegerField(0)
+equipo_gan = models.CharField(max_length=30)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
